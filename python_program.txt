@@ -1,5 +1,5 @@
 
-#this is comment in pyhon program
+#this is comment in python program
 
 user = input("enter array").split(",")
 array = list(user)
