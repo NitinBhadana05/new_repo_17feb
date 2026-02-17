@@ -1,0 +1,11 @@
+user = input("enter array").split(",")
+array = list(user)
+seen = {}
+
+for i in array:
+    if i not in seen:
+        seen[i] = 0
+    seen[i] +=1
+
+for i,x in seen.items():
+    print(i," - ",x)a
