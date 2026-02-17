@@ -1,3 +1,6 @@
+
+#this is comment in pyhon program
+
 user = input("enter array").split(",")
 array = list(user)
 seen = {}
