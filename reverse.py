@@ -1,18 +1,31 @@
-def reverse(num: int) -> int:
-    temp = num
-    digit = 0
-    reverse_num = 0
-    
-    while (temp != 0):
-        digit = temp % 10
-        reverse_num = reverse_num* 10 + digit
-        temp //= 10
-    
-    return reverse_num
 
-num = int(input("enter a number "))
-print("reverse of ",num,"is",reverse(num))
 
+def reverse_number(number: int) -> int:
+    """
+    Reverse digits of a number.
+    Handles negative numbers.
+    """
+
+    if number == 0:
+        return 0
+
+    is_negative: bool = False
+
+    if number < 0:
+        is_negative = True
+        number = -number
+
+    reversed_number: int = 0
+
+    while number > 0:
+        last_digit: int = number % 10
+        reversed_number = reversed_number * 10 + last_digit
+        number = number // 10
+
+    if is_negative:
+        reversed_number = -reversed_number
+
+    return reversed_number
 
 
 """
